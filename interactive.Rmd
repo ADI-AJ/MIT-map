@@ -1,0 +1,20 @@
+---
+title: "The tiny world"
+author: "Adithya Ajay"
+date: "20/10/2020"
+output: html_document
+---
+
+```{r}
+D<-Sys.Date()
+D
+```
+
+```{r}
+library(leaflet)
+globe<-leaflet() %>% 
+  addTiles()
+globe <- addMarkers(globe, lng=74.792769, lat=13.352772, popup="MIT")
+globe
+
+```
